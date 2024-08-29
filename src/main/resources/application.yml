@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: product
+
+
+  profiles:
+    active: dev
+
+  data:
+    mongodb:
+      host: ${DB_HOST}
+      port: ${DB_PORT}
+      database: ${DB_NAME}
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      authentication-database: ${AUTHENTICATION-DATABASE}
+
+  servlet: # this is for file upload
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+
+springdoc:
+  swagger-ui:
+    path: /
+minio:
+  url: ${MINIO_URL}
+  secret-key: ${MINIO_SECRETE_KEY}
+  bucket-name: ${MINIO_BUCKET}
+  access-key: ${MINIO_ACCESS_KEY}
+
+media:
+  #media endpoint
+  end-point: ${MEDIA_ENDPOINT}
+  #the host that handle show image
+  base-uri: ${MEDIA_BASE_URI}
+
+telegram:
+  bot:
+    token: ${TELEGRAM_TOKEN}
+    #    username: ${TELEGRAM_USERNAME}
+    id: ${TELEGRAM_ID}

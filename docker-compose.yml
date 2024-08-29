@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  test-mongo:
+    container_name: 'mongo-db-test-homework1'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - TZ=Asia/Bangkok
+    ports:
+      - '7000:8080'
+    volumes:
+      - '/home/istad_lms/images:/home/istad/media'
