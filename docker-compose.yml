@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   test-mongo:
-    container_name: 'mongo-db-test-homework1'
+    container_name: 'product-file-api'
     build:
       context: .
       dockerfile: Dockerfile
